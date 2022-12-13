@@ -233,7 +233,7 @@ def run(config):
         root_perm =  config["data_folder"]
         transform = transforms.Compose(
             [
-                transforms.Scale(config["resolution"]),
+                transforms.Resize(config["resolution"]),
                 transforms.CenterCrop(config["resolution"]),
                 transforms.RandomHorizontalFlip(),
                 transforms.ToTensor(),

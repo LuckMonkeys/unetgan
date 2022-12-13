@@ -298,7 +298,8 @@ class Celeba(VisionDataset):
 
     def random_batch(self,index, fixed=False):
 
-        file = str(index+1).zfill(6) + '.png'
+        # file = str(index+1).zfill(6) + '.png'
+        file = str(index+1).zfill(6) + '.jpg'
         image_path = os.path.join(self.root, file )
         img = Image.open( image_path).convert('RGB')
         if fixed:
